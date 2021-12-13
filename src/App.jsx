@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './components';
+import { Home, UseRefExample1 } from './components';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <div className="container mt-5">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/useref-example-1" element={<UseRefExample1 />} />
         </Routes>
       </div>
     </Router>
