@@ -1,26 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
+import { Todo } from '.';
 
 const UseRefExample3 = () => {
-  const [name, setName] = useState('');
-
-  const renders = useRef(1);
-  const prevName = useRef('');
-
-  useEffect(() => {
-    renders.current = renders.current + 1;
-    prevName.current = name;
-  }, [name]);
+  const [showTodo, setShowTodo] = useState(true);
 
   return (
     <div>
-      <h1>Renders: {renders.current}</h1>
-      <h2>Prev Name State: {prevName.current}</h2>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className="form-control mb-3"
-      />
+      {showTodo && <Todo />}
+      <button
+        type="buttton"
+        className="btn btn-primary"
+        onClick={() => setShowTodo(!showTodo)}
+      >
+        Toggle Todo
+      </button>
     </div>
   );
 };
