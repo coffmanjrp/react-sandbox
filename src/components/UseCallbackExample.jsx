@@ -4,13 +4,13 @@ import Button from './Button';
 const UseCallbackExample = () => {
   const [tasks, setTasks] = useState([]);
 
-  const addTack = useCallback(() => {
+  const addTask = useCallback(() => {
     setTasks((prevState) => [...prevState, 'Some Task']);
   }, [setTasks]);
 
   return (
     <div>
-      <Button addTask={addTack} />
+      <Button addTask={addTask} />
       {tasks.map((task, index) => (
         <p key={index}>{task}</p>
       ))}

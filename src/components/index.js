@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as CustomHookExample1 } from './CustomHookExample1';
 export { default as Home } from './Home';
 export { default as Todo } from './Todo';
 export { default as UseCallbackExample } from './UseCallbackExample';
