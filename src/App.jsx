@@ -5,6 +5,7 @@ import {
   UseRefExample2,
   UseRefExample3,
   UseMemoExample,
+  UseCallbackExample,
 } from './components';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/useref-example-2" element={<UseRefExample2 />} />
           <Route path="/useref-example-3" element={<UseRefExample3 />} />
           <Route path="/usememo-example" element={<UseMemoExample />} />
+          <Route path="/usecallback-example" element={<UseCallbackExample />} />
         </Routes>
       </div>
     </Router>
