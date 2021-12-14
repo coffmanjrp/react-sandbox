@@ -1,10 +1,14 @@
 import useFetch from '../hooks/useFetch';
 
 const CustomHookExample1 = () => {
-  const { data, loading } = useFetch(
+  const { data, loading, error } = useFetch(
     'https://jsonplaceholder.typicode.com/posts',
     {}
   );
+
+  if (error) {
+    return <div>Some Error Occured</div>;
+  }
 
   if (loading) {
     return <h3>Loading...</h3>;

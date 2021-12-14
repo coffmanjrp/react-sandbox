@@ -8,7 +8,7 @@ const UseRefExample3 = () => {
     <div>
       {showTodo && <Todo />}
       <button
-        type="buttton"
+        type="button"
         className="btn btn-primary"
         onClick={() => setShowTodo(!showTodo)}
       >

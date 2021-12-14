@@ -4,7 +4,7 @@ const UseMemoExample = () => {
   const [number, setNumber] = useState(1);
   const [inc, setInc] = useState(0);
 
-  // const sqrt = getSqrt(number)
+  // const sqrt = getSqrt(number);
   const sqrt = useMemo(() => getSqrt(number), [number]);
 
   const renders = useRef(1);
@@ -21,7 +21,7 @@ const UseMemoExample = () => {
   };
 
   function getSqrt(n) {
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 10000; i++) {
       console.log(i);
     }
 
@@ -43,6 +43,7 @@ const UseMemoExample = () => {
       <button className="btn btn-primary" onClick={onClick}>
         Re Render
       </button>
+      <h3>Renders: {renders.current}</h3>
     </div>
   );
 };
